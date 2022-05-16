@@ -1,10 +1,14 @@
 <template>
-  <h1 class="text-2xl text-red-600">Bonjour monde</h1>
+  <HeaderComp />
+  <MenuComp />
 </template>
 
 <script >
+import HeaderComp from "./components/HeaderComp.vue";
+import MenuComp from "./components/MenuComp.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: { HeaderComp, MenuComp },
 };
 </script>
