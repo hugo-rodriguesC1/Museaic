@@ -1,6 +1,11 @@
 <template>
-  <HeaderComp />
-  <MenuComp />
+  <div class="flex flex-col h-screen">
+    <HeaderComp class="flex-initial" />
+    <div class="flex flex-row h-full">
+      <MenuComp />
+      <div></div>
+    </div>
+  </div>
 </template>
 
 <script>
