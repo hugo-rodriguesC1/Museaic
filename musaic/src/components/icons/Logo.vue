@@ -5,7 +5,7 @@
     viewBox="0 0 105 21"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="flex-grow-0 flex-shrink-0 w-[104.29px] h-5 relative"
+    class="flex-grow-0 flex-shrink-0 w-[104.29px] h-5"
     preserveAspectRatio="xMidYMid meet"
   >
     <g clip-path="url(#clip0_202_1147)">
