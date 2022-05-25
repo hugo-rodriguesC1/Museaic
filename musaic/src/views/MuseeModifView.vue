@@ -19,198 +19,221 @@
         row-span-5
         grid grid-cols-6
         auto-rows-[minmax(80px,93.5px)]
+        relative
       "
     >
+      <img :src="null" id="fond" alt="" class="absolute h-full w-full" />
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 border"
+        class="border-red-700 z-10 border"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
+    </div>
+    <div class="col-span-2 flex flex-col gap-1.5">
+      <button
+        class="text-black bg-white w-full h-7"
+        @click="itemOuvert = !itemOuvert"
+      >
+        Items
+      </button>
+      <button
+        class="text-black bg-white w-full h-7"
+        @click="tableauOuvert = !tableauOuvert"
+      >
+        Tableaux
+      </button>
+      <button
+        class="text-black bg-white w-full h-7"
+        @click="fondOuvert = !fondOuvert"
+      >
+        Fonds
+      </button>
     </div>
     <div
       class="
         bg-red-50
         col-span-2
-        row-span-4
+        row-span-3
         grid grid-cols-3
         auto-rows-[90px]
         overflow-hidden overflow-y-scroll
       "
+      :class="itemOuvert ? '' : 'hidden'"
     >
       <div
         class="border-blue-700 border"
@@ -315,6 +338,158 @@
         @drop.prevent="drop"
       ></div>
     </div>
+    <div
+      class="
+        bg-red-50
+        col-span-2
+        row-span-3
+        grid grid-cols-3
+        auto-rows-[90px]
+        overflow-hidden overflow-y-scroll
+      "
+      :class="tableauOuvert ? '' : 'hidden'"
+    >
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      >
+        <img
+          draggable="true"
+          @dragstart="dragStart"
+          @dragover.stop
+          class="max-w-[5.5rem] mx-auto"
+        />
+      </div>
+
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+      <div
+        class="border-blue-700 border"
+        @dragover.prevent
+        @drop.prevent="drop"
+      ></div>
+    </div>
+    <div
+      class="
+        bg-red-50
+        col-span-2
+        row-span-3
+        grid grid-cols-3
+        auto-rows-[90px]
+        overflow-hidden overflow-y-scroll
+      "
+      :class="fondOuvert ? '' : 'hidden'"
+    >
+      <div
+        class="border-blue-700 border flex"
+        v-for="fond in listeFond"
+        :key="fond.id"
+      >
+        <img
+          :src="fond.img"
+          :id="fond.id"
+          class="w-full mx-auto"
+          @click="setFond"
+        />
+      </div>
+
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+      <div class="border-blue-700 border"></div>
+    </div>
     <button type="submit" class="bg-white">Modifier</button>
     <button class="bg-white">
       <router-link to="/musee">Annuler</router-link>
@@ -350,10 +525,15 @@ export default {
   data() {
     return {
       listeItem: [],
+      listeFond: [],
+      itemOuvert: false,
+      tableauOuvert: false,
+      fondOuvert: false,
     };
   },
   mounted() {
     this.getItems();
+    this.getFond();
   },
   methods: {
     dragStart: (e) => {
@@ -368,6 +548,11 @@ export default {
       const img = document.getElementById(imgID);
       img.style.display = "block";
       e.target.appendChild(img);
+    },
+    setFond: (event) => {
+      const target = event.target;
+      const imgt = target.src;
+      document.getElementById("fond").src = imgt;
     },
     async getItems() {
       const firestore = getFirestore();
@@ -387,6 +572,28 @@ export default {
             .catch((error) => {
               console.log("erreur downloadUrl", error);
             });
+        });
+      });
+    },
+    async getFond() {
+      const firestore = getFirestore();
+      const dbFond = collection(firestore, "fond");
+      await onSnapshot(dbFond, (snapshot) => {
+        this.listeFond = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.listeFond.forEach(function (it) {
+          const storage = getStorage();
+          const dbFonds = ref(storage, "fond/" + it.img);
+          getDownloadURL(dbFonds)
+            .then((url) => {
+              it.img = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+          console.log(it.img);
         });
       });
     },

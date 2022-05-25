@@ -15,7 +15,7 @@
           <div class="h-px bg-purple-400 w-36 my-3"></div>
         </li>
         <li>
-          <router-link to="/compte">Compte</router-link>
+          <router-link to="/connect">Compte</router-link>
           <div class="h-px bg-purple-400 w-36 my-3"></div>
         </li>
       </ul>
