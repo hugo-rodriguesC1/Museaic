@@ -1,7 +1,7 @@
 <template>
-  <div class="grid w-full bg-gray-900 grid-cols-6 gap-5 px-5 py-12 h-[91vh]">
+  <div class="grid w-full bg-gray-900 grid-cols-6 gap-5 px-5 py-12 h-full">
     <div></div>
-    <form @submit.prevent="onCnx" class="col-span-2">
+    <form @submit.prevent="onCnx" class="col-span-2 mt-10">
       <div class="flex flex-col gap-10 bg-gray-800 p-5">
         <h2 class="self-center text-white text-xl uppercase">Se connecter</h2>
         <div class="flex flex-col gap-4">
@@ -57,7 +57,68 @@
         </div>
       </div>
     </form>
-    <div class="col-span-2"></div>
+    <form class="col-span-2 mt-10">
+      <div class="flex flex-col gap-4 bg-gray-800 p-5">
+        <h2 class="self-center text-white text-xl uppercase">S'inscrire</h2>
+        <div class="flex flex-row gap-4 justify-between">
+          <div class="flex flex-col gap-2 w-full">
+            <span class="text-white">Nom</span
+            ><input
+              type="text"
+              placeholder="Nom"
+              class="h-10 bg-gray-200 pl-1"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-2 w-full">
+            <span class="text-white">Prénom</span
+            ><input
+              type="text"
+              placeholder="Prénom"
+              class="h-10 bg-gray-200 pl-1"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="text-white">Nom d'utilisateur</span
+          ><input
+            type="text"
+            placeholder="Nom d'utilisateur"
+            class="h-10 bg-gray-200 pl-1"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="text-white">Email</span
+          ><input
+            type="email"
+            placeholder="Adresse email"
+            class="h-10 bg-gray-200 pl-1"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="text-white">Mot de passe</span>
+          <div class="relative">
+            <input
+              placeholder="Mot de passe"
+              class="h-10 bg-gray-200 pl-1 relative w-full"
+              required
+            />
+            <button>
+              <EyeIcon class="w-6 h-6 absolute top-2 right-2" />
+            </button>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="text-white bg-indigo-700 p-2 w-1/2 mx-auto"
+        >
+          S'inscrire
+        </button>
+      </div>
+    </form>
   </div>
 </template>
 

@@ -9,6 +9,7 @@
       gap-5
       px-5
       py-12
+      h-full
     "
   >
     <card title="Informations" class="col-span-4">

@@ -5,6 +5,8 @@ import MuseeModifView from '../views/MuseeModifView.vue'
 import BoutiqueView from '../views/BoutiqueView.vue'
 import CompteView from '../views/CompteView.vue'
 import ConnectView from '../views/ConnectView.vue'
+import InventaireView from '../views/InventaireView.vue'
+import DecouvrirView from '../views/DecouvrirView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +40,16 @@ const router = createRouter({
       path: '/connect',
       name: 'ConnectView',
       component: ConnectView
+    },
+    {
+      path: '/inventaire',
+      name: 'InventaireView',
+      component: InventaireView
+    },
+    {
+      path: '/decouvrir',
+      name: 'DecouvrirView',
+      component: DecouvrirView
     },
 
 

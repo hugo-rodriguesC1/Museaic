@@ -7,8 +7,10 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.6.4",
     "@heroicons/vue": "^1.0.6",
     "mitt": "^3.0.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "vue": "^3.2.31",
     "vue-router": "^4.0.14"
   },

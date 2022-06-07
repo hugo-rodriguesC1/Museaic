@@ -1,9 +1,13 @@
 <template>
   <div class="bg-gray-800 h-16 flex items-center px-4 justify-between">
     <Logo />
-    <div v-if="avatar != null" class="flex text-white gap-2 items-center">
+    <router-link
+      to="/compte"
+      v-if="avatar != null"
+      class="flex text-white gap-2 items-center"
+    >
       {{ name }}<img :src="avatar" alt="image de profil" class="w-36" />
-    </div>
+    </router-link>
     <router-link
       v-if="avatar == null"
       to="/connect"
@@ -40,11 +44,9 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.
 
 import { emitter } from "../main.js";
 import Logo from "./icons/Logo.vue";
-import Account from "./icons/Account.vue";
-import Bell from "./icons/Bell.vue";
 
 export default {
-  components: { Logo, Bell, Account },
+  components: { Logo },
   data() {
     return {
       user: {

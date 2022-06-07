@@ -1,5 +1,16 @@
 <template>
-  <div class="grid w-full bg-gray-900 grid-cols-6 grid-rows-4 gap-5 px-5 py-12">
+  <div
+    class="
+      grid
+      w-full
+      bg-gray-900
+      grid-cols-6 grid-rows-4
+      gap-5
+      px-5
+      py-12
+      h-full
+    "
+  >
     <card title="Nouveautés"
       ><div class="grid grid-cols-2 auto-rows-[12.7vh] gap-4 mt-4 h-5/6">
         <div class="relative">

@@ -1,13 +1,28 @@
 <template>
-  <div class="flex flex-col h-full">
+  <div class="flex flex-col h-screen">
     <HeaderComp class="flex-initial" />
     <div class="flex flex-row h-full">
       <MenuComp />
 
-      <RouterView />
+      <div class="w-full relative">
+        <img
+          src="/img/Illustration/bgt.png"
+          alt="art abstrait"
+          class="absolute top-3"
+        />
+        <RouterView />
+        <img
+          src="/img/Illustration/bgb.png"
+          alt="art abstrait"
+          class="absolute bottom-3"
+        />
+      </div>
     </div>
   </div>
 </template>
+
+
+
 
 <script>
 import {

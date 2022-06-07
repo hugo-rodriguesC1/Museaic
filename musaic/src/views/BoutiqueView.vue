@@ -9,6 +9,7 @@
       gap-5
       px-5
       py-12
+      h-full
     "
   >
     <card title="Nouveautés" class="col-span-full row-span-3">
