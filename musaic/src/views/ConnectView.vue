@@ -160,7 +160,7 @@ export default {
         .then((response) => {
           this.user = response.user;
           emitter.emit("connectUser", { user: this.user });
-          console.log("user", this.user);
+          // console.log("user", this.user);
 
           this.message = "User connecté : " + this.user.email;
         })

@@ -77,12 +77,12 @@ export default {
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user connecté", this.user);
+      // console.log("App => Réception user connecté", this.user);
       this.getUserInfo(this.user);
     });
     emitter.on("deConnectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user déconnecté", this.user);
+      // console.log("App => Réception user déconnecté", this.user);
       this.userInfo = null;
       this.name = null;
       this.avatar = null;
@@ -109,11 +109,11 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log("userInfo", this.userInfo);
+        // console.log("userInfo", this.userInfo);
         this.name = this.userInfo[0].login;
-        console.log(this.name);
+        // console.log(this.name);
         this.isAdmin = this.userInfo[0].admin;
-        console.log(this.isAdmin);
+        // console.log(this.isAdmin);
 
         const storage = getStorage();
         const spaceRef = ref(storage, "users/" + this.userInfo[0].avatar);
@@ -127,9 +127,9 @@ export default {
             console.log("erreur dl", error);
           });
 
-        console.log(this.userInfo[0].avatar);
-        console.log(this.userInfo[0]);
-        console.log("avatar", this.avatar);
+        // console.log(this.userInfo[0].avatar);
+        // console.log(this.userInfo[0]);
+        // console.log("avatar", this.avatar);
       });
     },
   },

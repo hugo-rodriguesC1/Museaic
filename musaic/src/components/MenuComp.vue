@@ -70,6 +70,58 @@
           <router-link to="/connect">Compte</router-link>
           <div class="h-px bg-purple-400 w-36 my-3"></div>
         </li>
+        <li v-if="isAdmin">
+          <Menu>
+            <MenuButton>
+              <h2
+                class="
+                  text-white text-lg
+                  font-semibold font-montserrat
+                  text-left
+                "
+              >
+                Admin
+              </h2>
+              <div class="h-px bg-purple-400 w-36 my-3"></div>
+              <div class="sr-only">Menu admin</div></MenuButton
+            >
+            <MenuItems class="flex w-full flex-col gap-2 py-5">
+              <MenuItem v-slot="{ active }">
+                <RouterLink
+                  to="/tableau"
+                  :class="{
+                    'bg-purple-800': active,
+                    'bg-purple-400': !active,
+                  }"
+                  class="text-white text-base p-2 font-semibold font-montserrat"
+                  >Tableaux</RouterLink
+                >
+              </MenuItem>
+              <MenuItem v-slot="{ active }">
+                <RouterLink
+                  to="/item"
+                  :class="{
+                    'bg-purple-800': active,
+                    'bg-purple-400': !active,
+                  }"
+                  class="text-white text-base p-2 font-semibold font-montserrat"
+                  >Items</RouterLink
+                >
+              </MenuItem>
+              <MenuItem v-slot="{ active }">
+                <RouterLink
+                  to="/fond"
+                  :class="{
+                    'bg-purple-800': active,
+                    'bg-purple-400': !active,
+                  }"
+                  class="text-white text-base p-2 font-semibold font-montserrat"
+                  >Fonds</RouterLink
+                >
+              </MenuItem>
+            </MenuItems>
+          </Menu>
+        </li>
       </ul>
     </nav>
   </div>

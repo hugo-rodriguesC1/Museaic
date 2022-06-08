@@ -393,9 +393,30 @@
           bg-gray-800
           w-full
         "
+        @click="reset()"
       >
-        Modifier
+        Réinitialiser
       </button>
+      <div
+        class="
+          text-white
+          font-montserrat
+          text-sm
+          border-[1px] border-purple-400
+          bg-gray-800
+          w-full
+          flex flex-col
+          justify-center
+          gap-1
+          items-center
+          pt-6
+        "
+        @dragover.prevent
+        @drop.prevent="deleteItem"
+      >
+        <div>Supprimer</div>
+        <img src="/img/move.png" alt="" class="w-5" />
+      </div>
       <button
         class="
           text-white
@@ -406,25 +427,8 @@
           w-full
         "
       >
-        <router-link to="/musee">Annuler</router-link>
+        <router-link to="/musee">Valider</router-link>
       </button>
-      <div
-        class="
-          text-white
-          font-montserrat
-          text-sm
-          border-[1px] border-purple-400
-          bg-gray-800
-          w-full
-          flex
-          justify-center
-          items-center
-        "
-        @dragover.prevent
-        @drop.prevent="deleteItem"
-      >
-        Supprimer
-      </div>
     </div>
   </div>
 </template>
@@ -486,11 +490,11 @@ export default {
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user connecté", this.user);
+      // console.log("App => Réception user connecté", this.user);
     });
     emitter.on("deConnectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user déconnecté", this.user);
+      // console.log("App => Réception user déconnecté", this.user);
     });
   },
   methods: {
@@ -543,7 +547,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log("liste des items", this.listeItem);
+        // console.log("liste des items", this.listeItem);
         this.listeItem.forEach(function (it) {
           const storage = getStorage();
           const dbItems = ref(storage, "item/" + it.img);
@@ -565,7 +569,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log(this.listeFond);
+        // console.log(this.listeFond);
         this.listeFond.forEach(function (it) {
           const storage = getStorage();
           const dbFonds = ref(storage, "fond/" + it.img);
@@ -584,7 +588,7 @@ export default {
         function (user) {
           if (user) {
             this.user = user;
-            console.log("user connect");
+            // console.log("user connect");
             this.getUserFond(this.user);
             this.getUserItem(this.user);
           }
@@ -661,6 +665,20 @@ export default {
       const firestore = getFirestore();
       const docUser = doc(firestore, "users", this.userId);
       await updateDoc(docUser, { fond: newfond });
+    },
+    async reset() {
+      // console.log("items reset", this.listeUserItem);
+      this.listeUserItem.forEach(
+        function (item, index) {
+          if (item) {
+            this.listeUserItem[index] = "";
+          }
+        }.bind(this)
+      );
+      const firestore = getFirestore();
+      const docUser = doc(firestore, "users", this.userId);
+      await updateDoc(docUser, { item: this.listeUserItem });
+      location.reload();
     },
   },
 };

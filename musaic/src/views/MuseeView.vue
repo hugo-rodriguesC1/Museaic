@@ -179,11 +179,11 @@ export default {
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user connecté", this.user);
+      // console.log("App => Réception user connecté", this.user);
     });
     emitter.on("deConnectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user déconnecté", this.user);
+      // console.log("App => Réception user déconnecté", this.user);
     });
   },
   methods: {
@@ -192,7 +192,7 @@ export default {
         function (user) {
           if (user) {
             this.user = user;
-            console.log("user connect");
+            // console.log("user connect");
             this.getUserFond(this.user);
             this.getUserItem(this.user);
           }
@@ -234,11 +234,11 @@ export default {
         }));
         this.userId = this.userInfo[0].id;
         this.listeUserItem = this.userInfo[0].item;
-        console.log("liste item user", this.listeUserItem);
+        // console.log("liste item user", this.listeUserItem);
         this.listeUserItem.forEach(
           function (item, index) {
             if (item) {
-              console.log("item dans la liste", item);
+              // console.log("item dans la liste", item);
               const storage = getStorage();
               const spaceRef = ref(storage, "item/" + item);
               getDownloadURL(spaceRef)

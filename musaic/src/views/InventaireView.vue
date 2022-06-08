@@ -24,26 +24,44 @@
     >
       <button
         class="text-white text-lg font-semibold font-montserrat"
-        @click="tableauOuvert = !tableauOuvert"
+        @click="
+          itemOuvert = false;
+          fondOuvert = false;
+          tableauOuvert = !tableauOuvert;
+        "
       >
         Tableau</button
       ><button
         class="text-white text-lg font-semibold font-montserrat"
-        @click="itemOuvert = !itemOuvert"
-        @focusout="itemOuvert = false"
+        @click="
+          itemOuvert = !itemOuvert;
+          fondOuvert = false;
+          tableauOuvert = false;
+        "
       >
         Item</button
       ><button
         class="text-white text-lg font-semibold font-montserrat"
-        @click="fondOuvert = !fondOuvert"
-        @focusout="fondOuvert = false"
+        @click="
+          itemOuvert = false;
+          fondOuvert = !fondOuvert;
+          tableauOuvert = false;
+        "
       >
         Fond
       </button>
     </div>
     <div class="bg-gray-800 col-span-4 row-span-full">
       <div
-        class="m-10 grid grid-cols-4 auto-rows-auto gap-9 place-items-center"
+        class="
+          m-10
+          grid grid-cols-4
+          auto-rows-auto
+          gap-9
+          place-items-center
+          overflow-y-scroll
+          scrollbar-hide
+        "
         v-if="itemOuvert"
       >
         <div
@@ -59,7 +77,11 @@
             bg-gray-200
           "
         >
-          <img :src="item.img" :id="item.id" class="w-4/5" />
+          <img
+            :src="item.img"
+            :id="item.id"
+            class="w-full h-full object-contain"
+          />
         </div>
       </div>
       <div
@@ -138,11 +160,11 @@ export default {
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user connecté", this.user);
+      // console.log("App => Réception user connecté", this.user);
     });
     emitter.on("deConnectUser", (e) => {
       this.user = e.user;
-      console.log("App => Réception user déconnecté", this.user);
+      // console.log("App => Réception user déconnecté", this.user);
     });
   },
   methods: {
@@ -175,7 +197,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log(this.listeFond);
+        // console.log(this.listeFond);
         this.listeFond.forEach(function (it) {
           const storage = getStorage();
           const dbFonds = ref(storage, "fond/" + it.img);
@@ -194,7 +216,7 @@ export default {
         function (user) {
           if (user) {
             this.user = user;
-            console.log("user connect");
+            // console.log("user connect");
           }
         }.bind(this)
       );

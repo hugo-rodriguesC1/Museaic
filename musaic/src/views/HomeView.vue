@@ -11,6 +11,19 @@
       h-full
     "
   >
+    <h1
+      class="
+        font-montserrat font-bold
+        text-2xl text-white
+        absolute
+        top-1
+        right-0
+        left-0
+        text-center
+      "
+    >
+      Bienvenue sur Muse'Aic
+    </h1>
     <card title="Actualités"
       ><div class="grid grid-cols-2 auto-rows-[12.7vh] gap-4 mt-4 h-5/6">
         <div class="relative">
