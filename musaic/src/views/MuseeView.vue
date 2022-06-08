@@ -12,6 +12,19 @@
       h-full
     "
   >
+    <h1
+      class="
+        font-montserrat font-bold
+        text-2xl text-white
+        absolute
+        top-1
+        right-0
+        left-0
+        text-center
+      "
+    >
+      Mon musée
+    </h1>
     <div
       class="
         bg-white
@@ -27,226 +40,94 @@
         alt=""
         class="absolute h-full w-full inset-0"
       />
-      <div
-        class="border-red-700 z-10 border"
-        id="0"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="1"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="2"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="3"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="4"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="5"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="6"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="7"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="8"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="9"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="10"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="11"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="12"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="13"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="14"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="15"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="16"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="17"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="18"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="19"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="20"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="21"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="22"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="23"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="24"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="25"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="26"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="27"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="28"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="29"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="30"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="31"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="32"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="33"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="34"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-red-700 z-10 border"
-        id="35"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
+      <div class="border-red-700 z-10 border" id="0"></div>
+      <div class="border-red-700 z-10 border" id="1"></div>
+      <div class="border-red-700 z-10 border" id="2"></div>
+      <div class="border-red-700 z-10 border" id="3"></div>
+      <div class="border-red-700 z-10 border" id="4"></div>
+      <div class="border-red-700 z-10 border" id="5"></div>
+      <div class="border-red-700 z-10 border" id="6"></div>
+      <div class="border-red-700 z-10 border" id="7"></div>
+      <div class="border-red-700 z-10 border" id="8"></div>
+      <div class="border-red-700 z-10 border" id="9"></div>
+      <div class="border-red-700 z-10 border" id="10"></div>
+      <div class="border-red-700 z-10 border" id="11"></div>
+      <div class="border-red-700 z-10 border" id="12"></div>
+      <div class="border-red-700 z-10 border" id="13"></div>
+      <div class="border-red-700 z-10 border" id="14"></div>
+      <div class="border-red-700 z-10 border" id="15"></div>
+      <div class="border-red-700 z-10 border" id="16"></div>
+      <div class="border-red-700 z-10 border" id="17"></div>
+      <div class="border-red-700 z-10 border" id="18"></div>
+      <div class="border-red-700 z-10 border" id="19"></div>
+      <div class="border-red-700 z-10 border" id="20"></div>
+      <div class="border-red-700 z-10 border" id="21"></div>
+      <div class="border-red-700 z-10 border" id="22"></div>
+      <div class="border-red-700 z-10 border" id="23"></div>
+      <div class="border-red-700 z-10 border" id="24"></div>
+      <div class="border-red-700 z-10 border" id="25"></div>
+      <div class="border-red-700 z-10 border" id="26"></div>
+      <div class="border-red-700 z-10 border" id="27"></div>
+      <div class="border-red-700 z-10 border" id="28"></div>
+      <div class="border-red-700 z-10 border" id="29"></div>
+      <div class="border-red-700 z-10 border" id="30"></div>
+      <div class="border-red-700 z-10 border" id="31"></div>
+      <div class="border-red-700 z-10 border" id="32"></div>
+      <div class="border-red-700 z-10 border" id="33"></div>
+      <div class="border-red-700 z-10 border" id="34"></div>
+      <div class="border-red-700 z-10 border" id="35"></div>
     </div>
-    <router-link to="/museemodif"
-      ><div class="bg-white">Modifier</div></router-link
-    >
+    <div class="col-span-2 row-span-5 bg-gray-800 p-8">
+      <h2 class="font-montserrat font-bold text-lg text-white">
+        Actions sur mon musée
+      </h2>
+      <form class="mt-5 flex flex-col gap-5">
+        <div class="flex flex-row gap-5 justify-between">
+          <h3 class="font-montserrat font-bold text-sm text-gray-400">
+            Nom du musée
+          </h3>
+          <input
+            type="text"
+            placeholder="Nom du musée"
+            class="bg-gray-200 text-gray-900 font-montserrat text-sm w-1/2 p-2"
+          />
+        </div>
+
+        <div class="flex flex-row gap-5 justify-between">
+          <h3 class="font-montserrat font-bold text-sm text-gray-400">
+            Description du musée
+          </h3>
+          <textarea
+            placeholder="Description"
+            class="
+              bg-gray-200
+              text-gray-900
+              font-montserrat
+              text-sm
+              w-1/2
+              h-40
+              p-2
+            "
+          ></textarea>
+        </div>
+      </form>
+      <router-link to="/museemodif"
+        ><div
+          class="
+            bg-purple-600
+            font-montserrat font-bold
+            text-base text-white
+            p-3
+            w-64
+            text-center
+            mx-auto
+            mt-20
+          "
+        >
+          Personaliser le musée
+        </div></router-link
+      >
+    </div>
   </div>
 </template>
 
@@ -282,8 +163,6 @@ export default {
   name: "MuseeModif",
   data() {
     return {
-      listeItem: [],
-      listeFond: [],
       user: {
         email: null,
         password: null,
@@ -297,8 +176,6 @@ export default {
   },
   mounted() {
     this.getUserConnect();
-    this.getItems();
-    this.getFond();
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
@@ -310,54 +187,6 @@ export default {
     });
   },
   methods: {
-    async getItems() {
-      console.log("liste des items de l'utilisateur", this.listeUserItem);
-      const itemsOnWall = [];
-
-      console.log("items deeja sur le mur", itemsOnWall);
-      const firestore = getFirestore();
-      const dbItem = collection(firestore, "item");
-      await onSnapshot(dbItem, (snapshot) => {
-        this.listeItem = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        console.log("liste des items", this.listeItem);
-        this.listeItem.forEach(function (it) {
-          const storage = getStorage();
-          const dbItems = ref(storage, "item/" + it.img);
-          getDownloadURL(dbItems)
-            .then((url) => {
-              it.img = url;
-            })
-            .catch((error) => {
-              console.log("erreur downloadUrl", error);
-            });
-        });
-      });
-    },
-    async getFond() {
-      const firestore = getFirestore();
-      const dbFond = collection(firestore, "fond");
-      await onSnapshot(dbFond, (snapshot) => {
-        this.listeFond = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        console.log(this.listeFond);
-        this.listeFond.forEach(function (it) {
-          const storage = getStorage();
-          const dbFonds = ref(storage, "fond/" + it.img);
-          getDownloadURL(dbFonds)
-            .then((url) => {
-              it.img = url;
-            })
-            .catch((error) => {
-              console.log("erreur downloadUrl", error);
-            });
-        });
-      });
-    },
     getUserConnect() {
       getAuth().onAuthStateChanged(
         function (user) {
@@ -422,8 +251,7 @@ export default {
                     img.src = this.itemAdded;
                     img.classList.add("h-4/5", "mx-auto");
                     img.id = this.listeUserItem[index];
-                    img.draggable = "true";
-                    img.ondragstart = this.dragStart;
+
                     div.appendChild(img);
                   }
                 })
@@ -437,11 +265,6 @@ export default {
           }.bind(this)
         );
       });
-    },
-    async updateFond(newfond) {
-      const firestore = getFirestore();
-      const docUser = doc(firestore, "users", this.userId);
-      await updateDoc(docUser, { fond: newfond });
     },
   },
 };

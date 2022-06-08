@@ -105,10 +105,17 @@
           mb-4
         "
       >
-        <DiscoverCard bg="/img/Discover/DecImg.png" />
-        <DiscoverCard />
-        <DiscoverCard />
-        <DiscoverCard />
+        <DiscoverCard
+          v-for="card in listeCard"
+          :key="card.id"
+          :bg="card.bg"
+          :pp="card.pp"
+          :Comm="card.comm"
+          :Like="card.like"
+          :Description="card.desc"
+          :Nom="card.nom"
+          :User="card.user"
+        />
       </div>
       <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
         Musées
@@ -121,43 +128,7 @@
           gap-8
           scrollbar-hide
         "
-      >
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-      </div>
+      ></div>
       <div
         class="
           grid grid-flow-col
@@ -208,6 +179,27 @@
 </template>
 
 <script>
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  doc, // Obtenir un document par son id
+  getDocs, // Obtenir la liste des documents d'une collection
+  addDoc, // Ajouter un document à une collection
+  updateDoc, // Mettre à jour un document dans une collection
+  deleteDoc, // Supprimer un document d'une collection
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+  uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
 import Search from "../components/icons/Search.vue";
 import Like from "../components/icons/Like.vue";
 import Comment from "../components/icons/Comment.vue";
@@ -216,5 +208,47 @@ import DiscoverCard from "../components/DiscoverCard.vue";
 export default {
   name: "Decouvrir",
   components: { Search, Like, Comment, DiscoverCard },
+  data() {
+    return {
+      listeCard: [],
+    };
+  },
+  mounted() {
+    this.getCard();
+  },
+  methods: {
+    async getCard() {
+      const firestore = getFirestore();
+      const dbCard = collection(firestore, "discover");
+      await onSnapshot(dbCard, (snapshot) => {
+        this.listeCard = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.listeCard.forEach(function (it) {
+          const storage = getStorage();
+          const dbpp = ref(storage, "discover/" + it.pp);
+          getDownloadURL(dbpp)
+            .then((url) => {
+              it.pp = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+        this.listeCard.forEach(function (it) {
+          const storage = getStorage();
+          const dbbg = ref(storage, "discover/" + it.bg);
+          getDownloadURL(dbbg)
+            .then((url) => {
+              it.bg = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+  },
 };
 </script>

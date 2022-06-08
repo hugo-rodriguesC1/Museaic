@@ -246,37 +246,77 @@
     </div>
     <div class="col-span-2 flex flex-col gap-1.5">
       <button
-        class="text-black bg-white w-full h-7"
-        @click="itemOuvert = !itemOuvert"
+        class="
+          text-white
+          font-montserrat
+          text-sm
+          border-[1px] border-purple-400
+          bg-gray-800
+          w-full
+          h-full
+          focus:bg-gray-700
+        "
+        @click="
+          itemOuvert = !itemOuvert;
+          fondOuvert = false;
+          tableauOuvert = false;
+        "
       >
         Items
       </button>
       <button
-        class="text-black bg-white w-full h-7"
-        @click="tableauOuvert = !tableauOuvert"
+        class="
+          text-white
+          font-montserrat
+          text-sm
+          border-[1px] border-purple-400
+          bg-gray-800
+          w-full
+          h-full
+          focus:bg-gray-700
+        "
+        @click="
+          itemOuvert = false;
+          fondOuvert = false;
+          tableauOuvert = !tableauOuvert;
+        "
       >
         Tableaux
       </button>
       <button
-        class="text-black bg-white w-full h-7"
-        @click="fondOuvert = !fondOuvert"
+        class="
+          text-white
+          font-montserrat
+          text-sm
+          border-[1px] border-purple-400
+          bg-gray-800
+          w-full
+          h-full
+          focus:bg-gray-700
+        "
+        @click="
+          itemOuvert = false;
+          fondOuvert = !fondOuvert;
+          tableauOuvert = false;
+        "
       >
         Fonds
       </button>
     </div>
     <div
       class="
-        bg-red-50
+        bg-gray-800
         col-span-2
         row-span-3
         grid grid-cols-3
         auto-rows-[90px]
         overflow-hidden overflow-y-scroll
+        scrollbar-hide
       "
-      :class="itemOuvert ? '' : 'hidden'"
+      v-if="itemOuvert"
     >
       <div
-        class="border-blue-700 border"
+        class="border-purple-400 border"
         @dragover.prevent
         @drop.prevent="drop"
         v-for="item in listeItem"
@@ -288,109 +328,24 @@
           draggable="true"
           @dragstart="dragStart"
           @dragover.stop
-          class="h-4/5 mx-auto"
+          class="h-full mx-auto"
         />
       </div>
-
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
     </div>
     <div
       class="
-        bg-red-50
+        bg-gray-800
         col-span-2
         row-span-3
         grid grid-cols-3
         auto-rows-[90px]
         overflow-hidden overflow-y-scroll
+        scrollbar-hide
       "
-      :class="tableauOuvert ? '' : 'hidden'"
+      v-if="tableauOuvert"
     >
       <div
-        class="border-blue-700 border"
+        class="border-purple-400 border"
         @dragover.prevent
         @drop.prevent="drop"
       >
@@ -401,106 +356,21 @@
           class="max-w-[5.5rem] mx-auto"
         />
       </div>
-
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
-      <div
-        class="border-blue-700 border"
-        @dragover.prevent
-        @drop.prevent="drop"
-      ></div>
     </div>
     <div
       class="
-        bg-red-50
+        bg-gray-800
         col-span-2
         row-span-3
         grid grid-cols-3
         auto-rows-[90px]
         overflow-hidden overflow-y-scroll
+        scrollbar-hide
       "
-      :class="fondOuvert ? '' : 'hidden'"
+      v-if="fondOuvert"
     >
       <div
-        class="border-blue-700 border flex"
+        class="border-purple-400 border flex"
         v-for="fond in listeFond"
         :key="fond.id"
       >
@@ -511,35 +381,50 @@
           @click="setFond"
         />
       </div>
-
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
-      <div class="border-blue-700 border"></div>
     </div>
-    <button type="submit" class="bg-white">Modifier</button>
-    <button class="bg-white">
-      <router-link to="/musee">Annuler</router-link>
-    </button>
-    <div
-      class="bg-white flex justify-center items-center"
-      @dragover.prevent
-      @drop.prevent="deleteItem"
-    >
-      Supprimer
+    <div class="col-span-2 flex flex-row gap-1.5">
+      <button
+        type="submit"
+        class="
+          text-white
+          font-montserrat
+          text-sm
+          border-[1px] border-purple-400
+          bg-gray-800
+          w-full
+        "
+      >
+        Modifier
+      </button>
+      <button
+        class="
+          text-white
+          font-montserrat
+          text-sm
+          border-[1px] border-purple-400
+          bg-gray-800
+          w-full
+        "
+      >
+        <router-link to="/musee">Annuler</router-link>
+      </button>
+      <div
+        class="
+          text-white
+          font-montserrat
+          text-sm
+          border-[1px] border-purple-400
+          bg-gray-800
+          w-full
+          flex
+          justify-center
+          items-center
+        "
+        @dragover.prevent
+        @drop.prevent="deleteItem"
+      >
+        Supprimer
+      </div>
     </div>
   </div>
 </template>
@@ -609,9 +494,10 @@ export default {
     });
   },
   methods: {
-    dragStart: (e) => {
+    dragStart(e) {
       const target = e.target;
       e.dataTransfer.setData("imgID", target.id);
+      this.listeUserItem[target.parentElement.id] = "";
       // setTimeout(() => {
       //   target.style.display = "none";
       // }, 0);
@@ -623,15 +509,12 @@ export default {
       img.style.display = "block";
       e.target.appendChild(img);
       this.listeUserItem[divId] = imgID;
-      console.log("liste emplacement", this.listeUserItem);
       const firestore = getFirestore();
       const docUser = doc(firestore, "users", this.userId);
       await updateDoc(docUser, { item: this.listeUserItem });
     },
     async deleteItem(e) {
       const imgID = e.dataTransfer.getData("imgID");
-      console.log(this.listeUserItem);
-      console.log(imgID);
       this.listeUserItem.forEach(
         function (item, index) {
           if (item == imgID) {
@@ -639,7 +522,6 @@ export default {
           }
         }.bind(this)
       );
-      console.log(this.listeUserItem);
       const firestore = getFirestore();
       const docUser = doc(firestore, "users", this.userId);
       await updateDoc(docUser, { item: this.listeUserItem });
@@ -650,15 +532,10 @@ export default {
       let imgt = target.src;
       document.getElementById("fond").src = imgt;
       this.newFond = target.id;
-      console.log(this.newFond);
       this.updateFond(this.newFond);
     },
 
     async getItems() {
-      console.log("liste des items de l'utilisateur", this.listeUserItem);
-      const itemsOnWall = [];
-
-      console.log("items deeja sur le mur", itemsOnWall);
       const firestore = getFirestore();
       const dbItem = collection(firestore, "item");
       await onSnapshot(dbItem, (snapshot) => {
@@ -749,11 +626,9 @@ export default {
         }));
         this.userId = this.userInfo[0].id;
         this.listeUserItem = this.userInfo[0].item;
-        console.log("liste item user", this.listeUserItem);
         this.listeUserItem.forEach(
           function (item, index) {
             if (item) {
-              console.log("item dans la liste", item);
               const storage = getStorage();
               const spaceRef = ref(storage, "item/" + item);
               getDownloadURL(spaceRef)
@@ -764,7 +639,7 @@ export default {
                   if (div.innerHTML == "") {
                     const img = document.createElement("img");
                     img.src = this.itemAdded;
-                    img.classList.add("h-4/5", "mx-auto");
+                    img.classList.add("h-full", "mx-auto");
                     img.id = this.listeUserItem[index];
                     img.draggable = "true";
                     img.ondragstart = this.dragStart;

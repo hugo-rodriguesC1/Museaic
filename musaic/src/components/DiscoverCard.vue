@@ -1,7 +1,11 @@
 <template>
   <div class="flex flex-col w-64">
     <div class="relative">
-      <img :src="bg" alt="image d'illustration du musée" class="w-full" />
+      <img
+        :src="bg"
+        alt="image d'illustration du musée"
+        class="w-full h-36 object-cover"
+      />
       <div class="absolute top-1/2 left-3">
         <div class="flex flex-row gap-1 items-center">
           <div class="bg-white rounded-full w-16 h-16 top-[60%] left-3">
@@ -11,7 +15,7 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <div>
+          <div class="bg-opacity-40 bg-black p-1">
             <h3 class="font-montserrat text-white text-lg">{{ Nom }}</h3>
             <p class="font-montserrat text-white text-base">{{ User }}</p>
           </div>
@@ -75,8 +79,8 @@ import Comment from "../components/icons/Comment.vue";
 export default {
   name: "Decouvrir",
   props: {
-    Like: Number,
-    Comm: Number,
+    Like: String,
+    Comm: String,
 
     Nom: String,
     User: String,
