@@ -29,7 +29,7 @@
             gap-4
             pl-12
           "
-          placeholder="Rechercher un musée..."
+          placeholder="Rechercher un tableau..."
         />
         <Search class="absolute top-2 left-3 bottom-0" />
       </div>
@@ -51,22 +51,24 @@
         >
           Tableaux
         </button>
-        <button
-          type="button"
-          class="
-            text-white
-            font-montserrat
-            text-xs
-            bg-transparent
-            rounded-r-md
-            border-[1px] border-white
-            p-2
-            active:bg-purple-500 active:border-purple-500
-            focus:bg-purple-500 focus:border-purple-500
-          "
-        >
-          Items
-        </button>
+        <router-link to="/boutiqueitem">
+          <button
+            type="button"
+            class="
+              text-white
+              font-montserrat
+              text-xs
+              bg-transparent
+              rounded-r-md
+              border-[1px] border-white
+              p-2
+              active:bg-purple-500 active:border-purple-500
+              focus:bg-purple-500 focus:border-purple-500
+            "
+          >
+            Items
+          </button>
+        </router-link>
       </div>
       <div class="flex flex-row gap-2 items-center">
         <div class="font-montserrat font-bold text-sm text-white">
@@ -176,9 +178,114 @@
             </div>
           </div>
         </div>
-        <img src="/img/Illustration/B2.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B3.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B31.png" alt="" class="w-full" />
+        <div class="relative">
+          <img
+            src="/img/Illustration/B2.png"
+            alt=""
+            class="w-full"
+            v-on:mouseenter="isHover1 = true"
+            v-on:mouseleave="isHover1 = false"
+          />
+          <div
+            v-if="isHover1"
+            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
+          >
+            <div
+              class="
+                flex flex-row
+                text-white
+                font-montserrat
+                text-sm
+                absolute
+                bottom-3
+                left-3
+                right-3
+                items-center
+                justify-between
+              "
+            >
+              <div class="flex flex-row gap-3">
+                <div class="flex flex-row gap-2 items-center">754<like /></div>
+                <div class="flex flex-row gap-2 items-center">
+                  31<comment />
+                </div>
+              </div>
+              <div class="font-bold">1200 coins</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/img/Illustration/B3.png"
+            alt=""
+            class="w-full"
+            v-on:mouseenter="isHover2 = true"
+            v-on:mouseleave="isHover2 = false"
+          />
+          <div
+            v-if="isHover2"
+            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
+          >
+            <div
+              class="
+                flex flex-row
+                text-white
+                font-montserrat
+                text-sm
+                absolute
+                bottom-3
+                left-3
+                right-3
+                items-center
+                justify-between
+              "
+            >
+              <div class="flex flex-row gap-3">
+                <div class="flex flex-row gap-2 items-center">754<like /></div>
+                <div class="flex flex-row gap-2 items-center">
+                  31<comment />
+                </div>
+              </div>
+              <div class="font-bold">1200 coins</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/img/Illustration/B31.png"
+            alt=""
+            class="w-full"
+            v-on:mouseenter="isHover3 = true"
+            v-on:mouseleave="isHover3 = false"
+          />
+          <div
+            v-if="isHover3"
+            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
+          >
+            <div
+              class="
+                flex flex-row
+                text-white
+                font-montserrat
+                text-sm
+                absolute
+                bottom-3
+                left-3
+                right-3
+                items-center
+                justify-between
+              "
+            >
+              <div class="flex flex-row gap-3">
+                <div class="flex flex-row gap-2 items-center">754<like /></div>
+                <div class="flex flex-row gap-2 items-center">
+                  31<comment />
+                </div>
+              </div>
+              <div class="font-bold">1200 coins</div>
+            </div>
+          </div>
+        </div>
       </div>
       <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
         Fantaisie
@@ -254,6 +361,9 @@ export default {
     return {
       listeCard: [],
       isHover: false,
+      isHover1: false,
+      isHover2: false,
+      isHover3: false,
     };
   },
   mounted() {

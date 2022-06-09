@@ -81,8 +81,22 @@
     >
     <card title="Mon musée">
       <router-link to="/musee"
-        ><div class="bg-white w-full h-5/6 my-4"></div
-      ></router-link>
+        ><div
+          class="bg-gray-900 w-full h-5/6 my-4 flex justify-center items-center"
+        >
+          <button
+            class="
+              bg-purple-600
+              text-white text-xl
+              font-montserrat
+              p-4
+              border border-white
+            "
+          >
+            Accéder au musée
+          </button>
+        </div></router-link
+      >
     </card>
     <Card title="Amis"
       ><div class="flex flex-col mt-4 gap-4 pr-5">

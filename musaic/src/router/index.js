@@ -15,6 +15,7 @@ import HomeView from '../views/HomeView.vue'
 import MuseeView from '../views/MuseeView.vue'
 import MuseeModifView from '../views/MuseeModifView.vue'
 import BoutiqueView from '../views/BoutiqueView.vue'
+import BoutiqueItemView from '../views/BoutiqueItemView.vue'
 import CompteView from '../views/CompteView.vue'
 import ConnectView from '../views/ConnectView.vue'
 import InventaireView from '../views/InventaireView.vue'
@@ -55,6 +56,11 @@ const router = createRouter({
       path: '/boutique',
       name: 'BoutiqueView',
       component: BoutiqueView
+    },
+    {
+      path: '/boutiqueitem',
+      name: 'BoutiqueItemView',
+      component: BoutiqueItemView
     },
     {
       path: '/compte',

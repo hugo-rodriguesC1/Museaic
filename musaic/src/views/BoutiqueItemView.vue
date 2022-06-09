@@ -29,28 +29,29 @@
             gap-4
             pl-12
           "
-          placeholder="Rechercher un musée..."
+          placeholder="Rechercher un item..."
         />
         <Search class="absolute top-2 left-3 bottom-0" />
       </div>
       <div class="flex flex-row items-center">
-        <button
-          type="button"
-          class="
-            text-white
-            font-montserrat
-            text-xs
-            bg-transparent
-            rounded-l-md
-            border-[1px] border-white
-            p-2
-            bg-purple-500
-            active:bg-purple-500 active:border-0
-            focus:bg-purple-500 focus:border-0
-          "
-        >
-          Tableaux
-        </button>
+        <router-link to="/boutique">
+          <button
+            type="button"
+            class="
+              text-white
+              font-montserrat
+              text-xs
+              bg-transparent
+              rounded-l-md
+              border-[1px] border-white
+              p-2
+              active:bg-purple-500 active:border-0
+              focus:bg-purple-500 focus:border-0
+            "
+          >
+            Tableaux
+          </button>
+        </router-link>
         <button
           type="button"
           class="
@@ -61,6 +62,7 @@
             rounded-r-md
             border-[1px] border-white
             p-2
+            bg-purple-500
             active:bg-purple-500 active:border-purple-500
             focus:bg-purple-500 focus:border-purple-500
           "
@@ -128,93 +130,81 @@
 
     <div class="col-span-6 overflow-y-scroll scrollbar-hide">
       <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Top tendances
+        Jardin moderne
       </h2>
       <div
         class="
-          grid grid-flow-col
-          auto-cols-max
-          grid-rows-1
+          grid grid-flow-col grid-cols-4 grid-rows-1
           gap-8
           scrollbar-hide
           mb-4
         "
       >
-        <div class="relative">
-          <img
-            src="/img/Illustration/B1.png"
-            alt=""
-            class="w-full"
-            v-on:mouseenter="isHover = true"
-            v-on:mouseleave="isHover = false"
-          />
-          <div
-            v-if="isHover"
-            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
-          >
-            <div
-              class="
-                flex flex-row
-                text-white
-                font-montserrat
-                text-sm
-                absolute
-                bottom-3
-                left-3
-                right-3
-                items-center
-                justify-between
-              "
-            >
-              <div class="flex flex-row gap-3">
-                <div class="flex flex-row gap-2 items-center">754<like /></div>
-                <div class="flex flex-row gap-2 items-center">
-                  31<comment />
-                </div>
-              </div>
-              <div class="font-bold">1200 coins</div>
-            </div>
-          </div>
+        <img
+          src="/img/Illustration/BasePack.png"
+          alt=""
+          class="col-span-full"
+        />
+      </div>
+      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
+        Profondeur
+      </h2>
+      <div
+        class="
+          grid grid-flow-col grid-cols-4 grid-rows-1
+          gap-8
+          scrollbar-hide
+          mb-4
+        "
+      >
+        <div
+          class="
+            bg-black
+            w-full
+            h-52
+            row-span-1
+            col-span-full
+            bg-opacity-50
+            flex
+            justify-center
+            items-center
+            text-white
+            font-montserrat
+            text-2xl
+          "
+        >
+          Bientôt disponible
         </div>
-        <img src="/img/Illustration/B2.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B3.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B31.png" alt="" class="w-full" />
       </div>
       <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Fantaisie
+        Crypte
       </h2>
       <div
         class="
-          grid grid-flow-col
-          auto-cols-max
-          grid-rows-1
+          grid grid-flow-col grid-cols-4 grid-rows-1
           gap-8
           scrollbar-hide
           mb-4
         "
       >
-        <img src="/img/Illustration/B4.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B5.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B6.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B61.png" alt="" class="w-full" />
-      </div>
-      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Cyberpunk
-      </h2>
-      <div
-        class="
-          grid grid-flow-col
-          auto-cols-max
-          grid-rows-1
-          gap-8
-          scrollbar-hide
-          mb-4
-        "
-      >
-        <img src="/img/Illustration/B7.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B8.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B9.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B91.png" alt="" class="w-full" />
+        <div
+          class="
+            bg-black
+            w-full
+            h-52
+            row-span-1
+            col-span-full
+            bg-opacity-50
+            flex
+            justify-center
+            items-center
+            text-white
+            font-montserrat
+            text-2xl
+          "
+        >
+          Bientôt disponible
+        </div>
       </div>
     </div>
   </div>
