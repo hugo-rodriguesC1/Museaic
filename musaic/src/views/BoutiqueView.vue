@@ -49,7 +49,7 @@
             focus:bg-purple-500 focus:border-0
           "
         >
-          Boutique
+          Officiel
         </button>
         <router-link to="/boutiquecommu">
           <button
@@ -66,7 +66,7 @@
               focus:bg-purple-500 focus:border-purple-500
             "
           >
-            Communeautaire
+            Communautaire
           </button>
         </router-link>
       </div>
@@ -227,21 +227,152 @@
           </div>
         </div>
       </div>
+      <div class="flex flex-row gap-5">
+        <div class="bg-gray-800 mt-5 py-5 px-10 w-2/3">
+          <h2 class="font-montserrat font-bold text-xl text-white">
+            Best sellers
+          </h2>
+          <div class="flex flex-row justify-between mt-5">
+            <img
+              src="/img/Illustration/BS1.png"
+              alt="item et oeuvres les mieux vendues"
+              class="w-56 h-36 object-contain"
+            />
+            <img
+              src="/img/Illustration/BS2.png"
+              alt="item et oeuvres les mieux vendues"
+              class="w-56 h-36 object-contain"
+            />
+            <img
+              src="/img/Illustration/BS3.png"
+              alt="item et oeuvres les mieux vendues"
+              class="w-56 h-36 object-contain"
+            />
+          </div>
+          <div class="flex flex-row justify-between mt-5">
+            <img
+              src="/img/Illustration/BS4.png"
+              alt="item et oeuvres les mieux vendues"
+              class="w-56 h-36 object-contain"
+            />
+            <img
+              src="/img/Illustration/BS5.png"
+              alt="item et oeuvres les mieux vendues"
+              class="w-56 h-36 object-contain"
+            />
+            <img
+              src="/img/Illustration/BS6.png"
+              alt="item et oeuvres les mieux vendues"
+              class="w-56 h-36 object-contain"
+            />
+          </div>
+        </div>
+        <div class="bg-gray-800 w-1/3 mt-5 p-5">
+          <h2 class="font-montserrat font-bold text-xl text-white">
+            Collection la plus populaire
+          </h2>
+          <img
+            src="/img/Illustration/ColPop.png"
+            alt="collection populaire"
+            class="mt-5"
+          />
+        </div>
+      </div>
       <div
-        class="
-          text-white
-          p-6
-          font-montserrat font-bold
-          text-xl
-          border border-white
-          bg-purple-400
-          mx-auto
-          w-52
-          text-center
-          mt-5
-        "
+        class="col-span-full flex flex-row justify-between items-center mt-10"
       >
-        Voir tout
+        <div class="relative">
+          <input
+            class="
+              bg-gray-700
+              h-10
+              text-gray-400
+              rounded-md
+              font-montserrat
+              text-sm
+              w-80
+              flex flex-row
+              items-center
+              gap-4
+              pl-12
+            "
+            placeholder="Rechercher"
+          />
+          <Search class="absolute top-2 left-3 bottom-0" />
+        </div>
+        <div class="font-montserrat font-bold text-2xl text-white">Tous</div>
+
+        <div class="flex flex-row gap-2 items-center">
+          <div class="font-montserrat font-bold text-sm text-white">
+            Catégorie
+          </div>
+          <button
+            class="
+              font-montserrat font-bold
+              text-sm text-gray-300
+              bg-gray-700
+              p-2
+            "
+          >
+            Sélectionner
+          </button>
+        </div>
+      </div>
+      <div class="bg-gray-800 mt-5 px-8 py-10">
+        <div class="flex flex-row justify-between">
+          <img
+            src="/img/Illustration/BS6.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/BS2.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/BS4.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/o3.jpg"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/o1.jpg"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+        </div>
+        <div class="flex flex-row justify-between mt-8">
+          <img
+            src="/img/Illustration/BS5.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/BS1.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/BS3.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/tous9.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+          <img
+            src="/img/Illustration/tous10.png"
+            alt="item et oeuvres"
+            class="w-56 h-36 object-cover"
+          />
+        </div>
       </div>
     </div>
   </div>

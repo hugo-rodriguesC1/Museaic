@@ -24,7 +24,7 @@
         text-center
       "
     >
-      Suppression
+      Création
     </h1>
     <div class="col-span-1"></div>
     <img :src="imageData" class="mx-auto mt-32 w-full" />
@@ -183,7 +183,7 @@ export default {
           const docRef = addDoc(collection(db, "tableau"), this.tableau);
         }
       );
-      this.$router.push("/listea");
+      this.$router.push("/tableau");
     },
   },
 };

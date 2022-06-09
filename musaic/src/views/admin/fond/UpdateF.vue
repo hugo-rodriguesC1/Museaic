@@ -24,7 +24,7 @@
         text-center
       "
     >
-      Suppression
+      Mise à jour
     </h1>
     <div class="col-span-1"></div>
     <img :src="imageData" class="mx-auto mt-32 w-full" />
@@ -212,7 +212,7 @@ export default {
       }
       const firestore = getFirestore();
       await updateDoc(doc(firestore, "fond", this.$route.params.id), this.fond);
-      this.$router.push("/listea");
+      this.$router.push("/fond");
     },
   },
 };

@@ -49,7 +49,7 @@
               focus:bg-purple-500 focus:border-0
             "
           >
-            Boutique
+            Officiel
           </button>
         </router-link>
 
@@ -68,7 +68,7 @@
             focus:bg-purple-500 focus:border-purple-500
           "
         >
-          Communeautaire
+          Communautaire
         </button>
       </div>
       <div class="flex flex-row gap-2 items-center">
@@ -130,6 +130,23 @@
     </div>
 
     <div class="col-span-6 overflow-y-scroll scrollbar-hide">
+      <div class="relative my-5">
+        <img src="/img/Illustration/tigre.png" alt="illustration tigre" />
+        <div class="bg-black absolute inset-0 bg-opacity-40"></div>
+        <p
+          class="
+            font-montserrat font-bold
+            text-white text-lg
+            absolute
+            bottom-32
+            left-10
+            w-1/2
+          "
+        >
+          Envie de décorer votre musée avec une nouvelle oeuvre ? Laissez-vous
+          séduire par le meilleur de la communauté.
+        </p>
+      </div>
       <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
         Top tendances
       </h2>

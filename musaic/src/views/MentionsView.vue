@@ -54,9 +54,9 @@
         <div>
           <h2 class="font-bold text-xl mb-4 text-transparent">d</h2>
           <p>Thomas Paquier</p>
-          <p class="mb-4">legardus@gmail.com</p>
+          <p class="mb-4">bpthomas2003@gmail.com</p>
           <p>Zoé-Augustine Vicat</p>
-          <p>zvicat@gmail.com</p>
+          <p>zoe.a.vicat@gmail.com</p>
         </div>
       </div>
       <div

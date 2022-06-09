@@ -206,7 +206,7 @@
           Musées
         </button>
       </div>
-      <div v-if="museeOuvert" class="flex flex-row justify-between mt-4">
+      <div v-if="museeOuvert" class="flex flex-row justify-between mt-10">
         <div class="relative">
           <img
             src="/img/Illustration/m1.jpg"
@@ -272,7 +272,7 @@
           </div>
         </div>
       </div>
-      <div v-if="oeuvresOuvert" class="flex flex-row justify-between mt-4">
+      <div v-if="oeuvresOuvert" class="flex flex-row justify-between mt-10">
         <div>
           <img
             src="/img/Illustration/o1.jpg"

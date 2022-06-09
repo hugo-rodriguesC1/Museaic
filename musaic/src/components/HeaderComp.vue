@@ -1,6 +1,8 @@
 <template>
   <div class="bg-gray-800 h-16 flex items-center px-4 justify-between">
-    <Logo />
+    <router-link to="/">
+      <Logo />
+    </router-link>
 
     <Menu>
       <MenuButton>

@@ -24,7 +24,7 @@
         text-center
       "
     >
-      Suppression
+      Mise à jour
     </h1>
     <div class="col-span-1"></div>
     <img :src="imageData" class="mx-auto mt-32 w-full" />
@@ -215,7 +215,7 @@ export default {
         doc(firestore, "tableau", this.$route.params.id),
         this.tableau
       );
-      this.$router.push("/listea");
+      this.$router.push("/tableau");
     },
   },
 };

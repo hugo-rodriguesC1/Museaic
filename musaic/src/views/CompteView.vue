@@ -108,47 +108,51 @@
         </div></div
     ></Card>
     <Card title="Mes oeuvres" class="row-span-4">
-      <div class="flex flex-row gap-4 mt-4">
-        <img src="/img/Illustration/oeuvrePerso1.jpg" alt="" />
-        <img src="/img/Illustration/oeuvrePerso2.jpg" alt="" />
-      </div>
-      <div class="flex flex-row gap-4 mt-4">
-        <img src="/img/Illustration/oeuvrePerso3.jpg" alt="" />
-        <img src="/img/Illustration/oeuvrePerso4.jpg" alt="" />
-      </div>
-      <div class="flex flex-row gap-4 mt-4">
-        <img
-          src="/img/Illustration/oeuvrePerso5.jpg"
-          alt=""
-          class="w-full h-auto object-cover"
-        />
-        <div class="flex flex-col gap-2 w-full">
-          <button
-            class="
-              w-full
-              p-4
-              text-white
-              font-montserrat
-              text-base
-              border-2 border-white
-            "
-          >
-            Voir plus
-          </button>
-          <button
-            class="
-              w-full
-              p-4
-              text-white
-              font-montserrat
-              text-base
-              border-2 border-white
-              bg-purple-400
-            "
-          >
-            Poster
-          </button>
+      <div class="h-2/3 overflow-y-scroll mb-4 scrollbar-hide">
+        <div class="flex flex-row gap-4 mt-4">
+          <img src="/img/Illustration/oeuvrePerso1.jpg" alt="" />
+          <img src="/img/Illustration/oeuvrePerso2.jpg" alt="" />
         </div>
+        <div class="flex flex-row gap-4 mt-4">
+          <img src="/img/Illustration/oeuvrePerso3.jpg" alt="" />
+          <img src="/img/Illustration/oeuvrePerso4.jpg" alt="" />
+        </div>
+        <div class="flex flex-row gap-4 mt-4">
+          <img
+            src="/img/Illustration/oeuvrePerso5.jpg"
+            alt=""
+            class="w-full h-auto object-cover"
+          />
+          <img :src="imgAdd" alt="" class="w-full h-auto object-cover" />
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 w-full">
+        <button
+          class="
+            w-full
+            p-4
+            text-white
+            font-montserrat
+            text-base
+            border-2 border-white
+          "
+        >
+          Voir plus
+        </button>
+        <button
+          v-on:click="poster = true"
+          class="
+            w-full
+            p-4
+            text-white
+            font-montserrat
+            text-base
+            border-2 border-white
+            bg-purple-400
+          "
+        >
+          Poster
+        </button>
       </div>
     </Card>
 
@@ -207,6 +211,132 @@
         Voir plus
       </button></card
     >
+    <div v-if="poster" class="bg-black bg-opacity-50 absolute inset-0 z-20">
+      <div
+        class="
+          absolute
+          top-20
+          bottom-20
+          left-40
+          right-40
+          grid
+          bg-gray-800
+          grid-cols-5
+          gap-5
+          px-5
+          py-16
+          overflow-y-scroll
+          scrollbar-hide
+        "
+      >
+        <h1
+          class="
+            font-montserrat font-bold
+            text-2xl text-white
+            absolute
+            top-10
+            right-0
+            left-0
+            text-center
+          "
+        >
+          Poster
+        </h1>
+        <img
+          :src="imageData"
+          class="mx-auto mt-20 w-full col-span-3 border-2 border-white"
+        />
+        <form
+          enctype="multipart/form-data"
+          @submit.prevent="createtableau"
+          class="col-span-2 mt-20"
+        >
+          <div class="mb-10 flex w-full flex-row">
+            <div
+              class="bg-purple-600 p-3 font-montserrat text-xl text-white w-28"
+            >
+              Nom
+            </div>
+            <input
+              type="text"
+              placeholder="Nom du tableau"
+              class="
+                w-full
+                border-[1px] border-gray-400
+                bg-white
+                p-2.5
+                font-montserrat
+                text-xl text-purple-600
+              "
+              v-model="tableau.nom"
+              required
+            />
+          </div>
+          <div
+            class="
+              w-full
+              bg-gray-900
+              p-3
+              text-center
+              font-barlow
+              text-xl
+              font-bold
+              uppercase
+              text-gray-100
+            "
+          >
+            Sélectionner une image
+          </div>
+          <input
+            type="file"
+            placeholder="Nom de l'tableau"
+            class="
+              mb-10
+              w-full
+              border-[1px] border-gray-400
+              bg-gray-100
+              p-2.5
+              font-montserrat
+              text-xl text-gray-900
+            "
+            name="file"
+            id="file"
+            ref="file"
+            @change="previewImage"
+          />
+          <div class="flex flex-row justify-between gap-5">
+            <button
+              type="submit"
+              class="
+                w-full
+                bg-purple-600
+                p-3
+                font-montserrat
+                text-xl
+                font-bold
+                text-white
+              "
+            >
+              Créer
+            </button>
+            <button
+              v-on:click="poster = false"
+              class="
+                w-full
+                bg-purple-600
+                p-3
+                font-montserrat
+                text-xl
+                font-bold
+                text-white
+              "
+            >
+              Annuler
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -252,10 +382,19 @@ export default {
       name: null,
       avatar: null,
       isAdmin: false,
+      imageData: null,
+      tableau: {
+        img: null,
+        nom: null,
+      },
+      poster: false,
+      imgAdd: null,
+      listetableau: [],
     };
   },
   mounted() {
     this.getUserConnect();
+    this.getImgAdd();
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
@@ -327,6 +466,58 @@ export default {
         .catch((error) => {
           console.log("erreur de deconnexion", error);
         });
+    },
+    previewImage: function (event) {
+      this.file = this.$refs.file.files[0];
+      this.tableau.img = this.file.name;
+      this.imgModifiee = true;
+      var input = event.target;
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = (e) => {
+          this.imageData = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    },
+
+    async createtableau() {
+      const storage = getStorage();
+      const refStorage = ref(storage, "tableau/" + this.tableau.img);
+      await uploadString(refStorage, this.imageData, "data_url").then(
+        (snapshot) => {
+          // console.log("upload a base 64 string");
+          const db = getFirestore();
+          const docRef = addDoc(collection(db, "tableau"), this.tableau);
+        }
+      );
+      this.$router.push("/compte");
+      this.poster = false;
+    },
+    async getImgAdd() {
+      const firestore = getFirestore();
+      const dbtableau = collection(firestore, "tableau");
+      await onSnapshot(dbtableau, (snapshot) => {
+        this.listetableau = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.listetableau.forEach(
+          function (it) {
+            if (it.nom == this.tableau.nom) {
+              const storage = getStorage();
+              const dbtableauimg = ref(storage, "tableau/" + it.img);
+              getDownloadURL(dbtableauimg)
+                .then((url) => {
+                  this.imgAdd = url;
+                })
+                .catch((error) => {
+                  console.log("erreur downloadUrl", error);
+                });
+            }
+          }.bind(this)
+        );
+      });
     },
   },
 };
