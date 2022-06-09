@@ -357,7 +357,7 @@
           draggable="true"
           @dragstart="dragStart"
           @dragover.stop
-          class="h-full w-full object-contain mx-auto"
+          class="h-full w-full object-cover mx-auto"
         />
       </div>
     </div>

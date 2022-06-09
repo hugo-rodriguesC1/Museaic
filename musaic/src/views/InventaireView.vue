@@ -85,6 +85,38 @@
         </div>
       </div>
       <div
+        class="
+          m-10
+          grid grid-cols-4
+          auto-rows-auto
+          gap-9
+          place-items-center
+          overflow-y-scroll
+          scrollbar-hide
+        "
+        v-if="tableauOuvert"
+      >
+        <div
+          v-for="tableau in listetableau"
+          :key="tableau.id"
+          class="
+            w-32
+            h-32
+            border-[1px] border-purple-400
+            flex
+            justify-center
+            items-center
+            bg-gray-200
+          "
+        >
+          <img
+            :src="tableau.img"
+            :id="tableau.id"
+            class="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+      <div
         class="m-10 grid grid-cols-4 auto-rows-auto gap-9 place-items-center"
         v-if="fondOuvert"
       >
@@ -142,6 +174,7 @@ export default {
     return {
       listeItem: [],
       listeFond: [],
+      listetableau: [],
       itemOuvert: true,
       tableauOuvert: false,
       fondOuvert: false,
@@ -156,6 +189,7 @@ export default {
   mounted() {
     this.getItems();
     this.getFond();
+    this.gettableau();
     this.getUserConnect();
 
     emitter.on("connectUser", (e) => {
@@ -202,6 +236,27 @@ export default {
           const storage = getStorage();
           const dbFonds = ref(storage, "fond/" + it.img);
           getDownloadURL(dbFonds)
+            .then((url) => {
+              it.img = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+    async gettableau() {
+      const firestore = getFirestore();
+      const dbtableau = collection(firestore, "tableau");
+      await onSnapshot(dbtableau, (snapshot) => {
+        this.listetableau = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.listetableau.forEach(function (it) {
+          const storage = getStorage();
+          const dbtableauimg = ref(storage, "tableau/" + it.img);
+          getDownloadURL(dbtableauimg)
             .then((url) => {
               it.img = url;
             })

@@ -122,6 +122,11 @@
             </MenuItems>
           </Menu>
         </li>
+        <li>
+          <router-link to="/mentions" class="text-sm absolute bottom-5 left-6"
+            >Mentions légales</router-link
+          >
+        </li>
       </ul>
     </nav>
   </div>

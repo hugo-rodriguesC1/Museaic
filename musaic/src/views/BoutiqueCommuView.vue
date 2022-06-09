@@ -29,7 +29,7 @@
             gap-4
             pl-12
           "
-          placeholder="Rechercher un item..."
+          placeholder="Rechercher"
         />
         <Search class="absolute top-2 left-3 bottom-0" />
       </div>
@@ -49,9 +49,10 @@
               focus:bg-purple-500 focus:border-0
             "
           >
-            Tableaux
+            Boutique
           </button>
         </router-link>
+
         <button
           type="button"
           class="
@@ -67,7 +68,7 @@
             focus:bg-purple-500 focus:border-purple-500
           "
         >
-          Items
+          Communeautaire
         </button>
       </div>
       <div class="flex flex-row gap-2 items-center">
@@ -130,81 +131,198 @@
 
     <div class="col-span-6 overflow-y-scroll scrollbar-hide">
       <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Jardin moderne
+        Top tendances
       </h2>
       <div
         class="
-          grid grid-flow-col grid-cols-4 grid-rows-1
+          grid grid-flow-col
+          auto-cols-max
+          grid-rows-1
           gap-8
           scrollbar-hide
           mb-4
         "
       >
-        <img
-          src="/img/Illustration/BasePack.png"
-          alt=""
-          class="col-span-full"
-        />
-      </div>
-      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Profondeur
-      </h2>
-      <div
-        class="
-          grid grid-flow-col grid-cols-4 grid-rows-1
-          gap-8
-          scrollbar-hide
-          mb-4
-        "
-      >
-        <div
-          class="
-            bg-black
-            w-full
-            h-52
-            row-span-1
-            col-span-full
-            bg-opacity-50
-            flex
-            justify-center
-            items-center
-            text-white
-            font-montserrat
-            text-2xl
-          "
-        >
-          Bientôt disponible
+        <div class="relative">
+          <img
+            src="/img/Illustration/B1.png"
+            alt=""
+            class="w-full"
+            v-on:mouseenter="isHover = true"
+            v-on:mouseleave="isHover = false"
+          />
+          <div
+            v-if="isHover"
+            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
+          >
+            <div
+              class="
+                flex flex-row
+                text-white
+                font-montserrat
+                text-sm
+                absolute
+                bottom-3
+                left-3
+                right-3
+                items-center
+                justify-between
+              "
+            >
+              <div class="flex flex-row gap-3">
+                <div class="flex flex-row gap-2 items-center">754<like /></div>
+                <div class="flex flex-row gap-2 items-center">
+                  31<comment />
+                </div>
+              </div>
+              <div class="font-bold">1200 coins</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/img/Illustration/B2.png"
+            alt=""
+            class="w-full"
+            v-on:mouseenter="isHover1 = true"
+            v-on:mouseleave="isHover1 = false"
+          />
+          <div
+            v-if="isHover1"
+            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
+          >
+            <div
+              class="
+                flex flex-row
+                text-white
+                font-montserrat
+                text-sm
+                absolute
+                bottom-3
+                left-3
+                right-3
+                items-center
+                justify-between
+              "
+            >
+              <div class="flex flex-row gap-3">
+                <div class="flex flex-row gap-2 items-center">754<like /></div>
+                <div class="flex flex-row gap-2 items-center">
+                  31<comment />
+                </div>
+              </div>
+              <div class="font-bold">1200 coins</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/img/Illustration/B3.png"
+            alt=""
+            class="w-full"
+            v-on:mouseenter="isHover2 = true"
+            v-on:mouseleave="isHover2 = false"
+          />
+          <div
+            v-if="isHover2"
+            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
+          >
+            <div
+              class="
+                flex flex-row
+                text-white
+                font-montserrat
+                text-sm
+                absolute
+                bottom-3
+                left-3
+                right-3
+                items-center
+                justify-between
+              "
+            >
+              <div class="flex flex-row gap-3">
+                <div class="flex flex-row gap-2 items-center">754<like /></div>
+                <div class="flex flex-row gap-2 items-center">
+                  31<comment />
+                </div>
+              </div>
+              <div class="font-bold">1200 coins</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/img/Illustration/B31.png"
+            alt=""
+            class="w-full"
+            v-on:mouseenter="isHover3 = true"
+            v-on:mouseleave="isHover3 = false"
+          />
+          <div
+            v-if="isHover3"
+            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
+          >
+            <div
+              class="
+                flex flex-row
+                text-white
+                font-montserrat
+                text-sm
+                absolute
+                bottom-3
+                left-3
+                right-3
+                items-center
+                justify-between
+              "
+            >
+              <div class="flex flex-row gap-3">
+                <div class="flex flex-row gap-2 items-center">754<like /></div>
+                <div class="flex flex-row gap-2 items-center">
+                  31<comment />
+                </div>
+              </div>
+              <div class="font-bold">1200 coins</div>
+            </div>
+          </div>
         </div>
       </div>
       <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Crypte
+        Fantaisie
       </h2>
       <div
         class="
-          grid grid-flow-col grid-cols-4 grid-rows-1
+          grid grid-flow-col
+          auto-cols-max
+          grid-rows-1
           gap-8
           scrollbar-hide
           mb-4
         "
       >
-        <div
-          class="
-            bg-black
-            w-full
-            h-52
-            row-span-1
-            col-span-full
-            bg-opacity-50
-            flex
-            justify-center
-            items-center
-            text-white
-            font-montserrat
-            text-2xl
-          "
-        >
-          Bientôt disponible
-        </div>
+        <img src="/img/Illustration/B4.png" alt="" class="w-full" />
+        <img src="/img/Illustration/B5.png" alt="" class="w-full" />
+        <img src="/img/Illustration/B6.png" alt="" class="w-full" />
+        <img src="/img/Illustration/B61.png" alt="" class="w-full" />
+      </div>
+      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
+        Cyberpunk
+      </h2>
+      <div
+        class="
+          grid grid-flow-col
+          auto-cols-max
+          grid-rows-1
+          gap-8
+          scrollbar-hide
+          mb-4
+        "
+      >
+        <img src="/img/Illustration/B7.png" alt="" class="w-full" />
+        <img src="/img/Illustration/B8.png" alt="" class="w-full" />
+        <img src="/img/Illustration/B9.png" alt="" class="w-full" />
+        <img src="/img/Illustration/B91.png" alt="" class="w-full" />
       </div>
     </div>
   </div>
@@ -244,6 +362,9 @@ export default {
     return {
       listeCard: [],
       isHover: false,
+      isHover1: false,
+      isHover2: false,
+      isHover3: false,
     };
   },
   mounted() {

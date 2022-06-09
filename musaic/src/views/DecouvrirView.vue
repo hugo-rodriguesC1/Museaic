@@ -92,7 +92,7 @@
     </div>
 
     <div class="col-span-6 overflow-y-scroll scrollbar-hide">
-      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
+      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-8">
         Top tendances
       </h2>
       <div
@@ -117,7 +117,7 @@
           :User="card.user"
         />
       </div>
-      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
+      <h2 class="font-montserrat font-bold text-2xl text-purple-400 my-8">
         Musées
       </h2>
       <div
@@ -127,8 +127,21 @@
           grid-rows-1
           gap-8
           scrollbar-hide
+          mb-4
         "
-      ></div>
+      >
+        <DiscoverCard
+          v-for="card in listeCard"
+          :key="card.id"
+          :bg="card.bg"
+          :pp="card.pp"
+          :Comm="card.comm"
+          :Like="card.like"
+          :Description="card.desc"
+          :Nom="card.nom"
+          :User="card.user"
+        />
+      </div>
       <div
         class="
           grid grid-flow-col
@@ -136,42 +149,19 @@
           grid-rows-1
           gap-8
           scrollbar-hide
+          mb-4
         "
       >
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
-        />
-        <img
-          src="/img/Discover/discoverMuseum.png"
-          alt="musée amis"
-          class="w-56"
+        <DiscoverCard
+          v-for="card in listeCard"
+          :key="card.id"
+          :bg="card.bg"
+          :pp="card.pp"
+          :Comm="card.comm"
+          :Like="card.like"
+          :Description="card.desc"
+          :Nom="card.nom"
+          :User="card.user"
         />
       </div>
     </div>

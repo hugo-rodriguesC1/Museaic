@@ -29,7 +29,7 @@
             gap-4
             pl-12
           "
-          placeholder="Rechercher un tableau..."
+          placeholder="Rechercher"
         />
         <Search class="absolute top-2 left-3 bottom-0" />
       </div>
@@ -49,9 +49,9 @@
             focus:bg-purple-500 focus:border-0
           "
         >
-          Tableaux
+          Boutique
         </button>
-        <router-link to="/boutiqueitem">
+        <router-link to="/boutiquecommu">
           <button
             type="button"
             class="
@@ -66,10 +66,11 @@
               focus:bg-purple-500 focus:border-purple-500
             "
           >
-            Items
+            Communeautaire
           </button>
         </router-link>
       </div>
+
       <div class="flex flex-row gap-2 items-center">
         <div class="font-montserrat font-bold text-sm text-white">
           Trier par
@@ -127,201 +128,120 @@
         </button>
       </div>
     </div>
-
-    <div class="col-span-6 overflow-y-scroll scrollbar-hide">
-      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Top tendances
-      </h2>
-      <div
-        class="
-          grid grid-flow-col
-          auto-cols-max
-          grid-rows-1
-          gap-8
-          scrollbar-hide
-          mb-4
-        "
-      >
-        <div class="relative">
-          <img
-            src="/img/Illustration/B1.png"
-            alt=""
-            class="w-full"
-            v-on:mouseenter="isHover = true"
-            v-on:mouseleave="isHover = false"
-          />
-          <div
-            v-if="isHover"
-            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
-          >
+    <div class="col-span-6 overflow-y-scroll">
+      <div class="bg-gray-800 mb-5">
+        <div class="flex flex-row justify-between h-full p-5">
+          <div class="flex flex-col m-5 w-1/3 justify-between">
+            <h2 class="font-montserrat font-bold text-xl text-white">
+              Nouveautés
+            </h2>
+            <p class="font-montserrat text-base text-white">
+              Envie de faire de votre musée un lieu vibrant de couleurs et de
+              lumières dans la nuit ? Adoptez une atmosphère cyberpunk en
+              décorant vos murs de néons et d’accessoires futuristes, pour
+              toujours être au cœur de la modernité.
+            </p>
+            <div class="flex flex-row gap-1">
+              <div class="font-montserrat font-bold text-lg text-purple-400">
+                Prix :
+              </div>
+              <div class="font-montserrat font-bold text-lg text-white">
+                2300 coins
+              </div>
+            </div>
             <div
               class="
-                flex flex-row
-                text-white
-                font-montserrat
-                text-sm
-                absolute
-                bottom-3
-                left-3
-                right-3
-                items-center
-                justify-between
+                font-montserrat font-bold
+                text-lg text-white
+                bg-purple-400
+                px-4
+                py-2
+                text-center
               "
             >
-              <div class="flex flex-row gap-3">
-                <div class="flex flex-row gap-2 items-center">754<like /></div>
-                <div class="flex flex-row gap-2 items-center">
-                  31<comment />
-                </div>
+              En apprendre plus
+            </div>
+          </div>
+          <img
+            src="/img/Illustration/boutiquePack.jpg"
+            alt="illustration futuriste"
+            class="w-2/3 m-5"
+          />
+        </div>
+      </div>
+      <div class="flex flex-row gap-5 w-full justify-between">
+        <div class="bg-gray-800 w-2/3 h-auto">
+          <h2 class="font-montserrat font-bold text-xl text-white p-5">
+            Séléction du moment
+          </h2>
+          <div
+            class="flex flex-row w-full justify-between items-center px-5 pb-5"
+          >
+            <img
+              src="/img/Illustration/JM1.png"
+              alt=""
+              class="w-96 h-64 object-contain"
+            />
+            <div class="flex flex-col items-center gap-6 h-64 w-96">
+              <div class="flex flex-row gap-6">
+                <img
+                  src="/img/Illustration/JM2.png"
+                  alt=""
+                  class="h-full w-full"
+                />
+                <img
+                  src="/img/Illustration/JM3.png"
+                  alt=""
+                  class="h-full w-full"
+                />
               </div>
-              <div class="font-bold">1200 coins</div>
+              <div class="flex flex-row gap-6">
+                <img
+                  src="/img/Illustration/JM4.png"
+                  alt=""
+                  class="h-full w-full"
+                />
+                <img
+                  src="/img/Illustration/JM5.png"
+                  alt=""
+                  class="h-full w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div class="relative">
-          <img
-            src="/img/Illustration/B2.png"
-            alt=""
-            class="w-full"
-            v-on:mouseenter="isHover1 = true"
-            v-on:mouseleave="isHover1 = false"
-          />
-          <div
-            v-if="isHover1"
-            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
-          >
-            <div
-              class="
-                flex flex-row
-                text-white
-                font-montserrat
-                text-sm
-                absolute
-                bottom-3
-                left-3
-                right-3
-                items-center
-                justify-between
-              "
-            >
-              <div class="flex flex-row gap-3">
-                <div class="flex flex-row gap-2 items-center">754<like /></div>
-                <div class="flex flex-row gap-2 items-center">
-                  31<comment />
-                </div>
-              </div>
-              <div class="font-bold">1200 coins</div>
+        <div class="bg-gray-800 w-1/3 flex justify-center items-center">
+          <div>
+            <div class="flex flex-row gap-4 mb-4">
+              <img src="/img/Illustration/In2.png" alt="" /><img
+                src="/img/Illustration/In3.png"
+                alt=""
+              />
             </div>
-          </div>
-        </div>
-        <div class="relative">
-          <img
-            src="/img/Illustration/B3.png"
-            alt=""
-            class="w-full"
-            v-on:mouseenter="isHover2 = true"
-            v-on:mouseleave="isHover2 = false"
-          />
-          <div
-            v-if="isHover2"
-            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
-          >
-            <div
-              class="
-                flex flex-row
-                text-white
-                font-montserrat
-                text-sm
-                absolute
-                bottom-3
-                left-3
-                right-3
-                items-center
-                justify-between
-              "
-            >
-              <div class="flex flex-row gap-3">
-                <div class="flex flex-row gap-2 items-center">754<like /></div>
-                <div class="flex flex-row gap-2 items-center">
-                  31<comment />
-                </div>
-              </div>
-              <div class="font-bold">1200 coins</div>
-            </div>
-          </div>
-        </div>
-        <div class="relative">
-          <img
-            src="/img/Illustration/B31.png"
-            alt=""
-            class="w-full"
-            v-on:mouseenter="isHover3 = true"
-            v-on:mouseleave="isHover3 = false"
-          />
-          <div
-            v-if="isHover3"
-            class="absolute w-full bg-black bg-opacity-70 top-0 left-0 h-full"
-          >
-            <div
-              class="
-                flex flex-row
-                text-white
-                font-montserrat
-                text-sm
-                absolute
-                bottom-3
-                left-3
-                right-3
-                items-center
-                justify-between
-              "
-            >
-              <div class="flex flex-row gap-3">
-                <div class="flex flex-row gap-2 items-center">754<like /></div>
-                <div class="flex flex-row gap-2 items-center">
-                  31<comment />
-                </div>
-              </div>
-              <div class="font-bold">1200 coins</div>
+            <div class="flex flex-row gap-4">
+              <img src="/img/Illustration/In4.png" alt="" /><img
+                src="/img/Illustration/In1.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </div>
-      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Fantaisie
-      </h2>
       <div
         class="
-          grid grid-flow-col
-          auto-cols-max
-          grid-rows-1
-          gap-8
-          scrollbar-hide
-          mb-4
+          text-white
+          p-6
+          font-montserrat font-bold
+          text-xl
+          border border-white
+          bg-purple-400
+          mx-auto
+          w-52
+          text-center
+          mt-5
         "
       >
-        <img src="/img/Illustration/B4.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B5.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B6.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B61.png" alt="" class="w-full" />
-      </div>
-      <h2 class="font-montserrat font-bold text-2xl text-purple-400 mb-4">
-        Cyberpunk
-      </h2>
-      <div
-        class="
-          grid grid-flow-col
-          auto-cols-max
-          grid-rows-1
-          gap-8
-          scrollbar-hide
-          mb-4
-        "
-      >
-        <img src="/img/Illustration/B7.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B8.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B9.png" alt="" class="w-full" />
-        <img src="/img/Illustration/B91.png" alt="" class="w-full" />
+        Voir tout
       </div>
     </div>
   </div>
@@ -353,10 +273,11 @@ import Search from "../components/icons/Search.vue";
 import Like from "../components/icons/Like.vue";
 import Comment from "../components/icons/Comment.vue";
 import DiscoverCard from "../components/DiscoverCard.vue";
+import Card from "../components/Card.vue";
 
 export default {
   name: "Decouvrir",
-  components: { Search, Like, Comment, DiscoverCard },
+  components: { Search, Like, Comment, DiscoverCard, Card },
   data() {
     return {
       listeCard: [],

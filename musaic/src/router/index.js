@@ -15,12 +15,13 @@ import HomeView from '../views/HomeView.vue'
 import MuseeView from '../views/MuseeView.vue'
 import MuseeModifView from '../views/MuseeModifView.vue'
 import BoutiqueView from '../views/BoutiqueView.vue'
-import BoutiqueItemView from '../views/BoutiqueItemView.vue'
+import BoutiqueCommuView from '../views/BoutiqueCommuView.vue'
 import CompteView from '../views/CompteView.vue'
 import ConnectView from '../views/ConnectView.vue'
 import InventaireView from '../views/InventaireView.vue'
 import DecouvrirView from '../views/DecouvrirView.vue'
 import CoinsView from '../views/CoinsView.vue'
+import MentionsView from '../views/MentionsView.vue'
 import ListeItem from '../views/admin/item/ListeItem.vue'
 import ListeTableau from '../views/admin/tableau/ListeTableau.vue'
 import ListeFond from '../views/admin/fond/ListeFond.vue'
@@ -58,9 +59,9 @@ const router = createRouter({
       component: BoutiqueView
     },
     {
-      path: '/boutiqueitem',
-      name: 'BoutiqueItemView',
-      component: BoutiqueItemView
+      path: '/boutiquecommu',
+      name: 'BoutiqueCommuView',
+      component: BoutiqueCommuView
     },
     {
       path: '/compte',
@@ -86,6 +87,11 @@ const router = createRouter({
       path: '/coins',
       name: 'CoinsView',
       component: CoinsView
+    },
+    {
+      path: '/mentions',
+      name: 'MentionsView',
+      component: MentionsView
     },
     {
       path: '/item',
