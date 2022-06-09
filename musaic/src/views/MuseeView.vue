@@ -40,42 +40,42 @@
         alt=""
         class="absolute h-full w-full inset-0"
       />
-      <div class="border-red-700 z-10 border" id="0"></div>
-      <div class="border-red-700 z-10 border" id="1"></div>
-      <div class="border-red-700 z-10 border" id="2"></div>
-      <div class="border-red-700 z-10 border" id="3"></div>
-      <div class="border-red-700 z-10 border" id="4"></div>
-      <div class="border-red-700 z-10 border" id="5"></div>
-      <div class="border-red-700 z-10 border" id="6"></div>
-      <div class="border-red-700 z-10 border" id="7"></div>
-      <div class="border-red-700 z-10 border" id="8"></div>
-      <div class="border-red-700 z-10 border" id="9"></div>
-      <div class="border-red-700 z-10 border" id="10"></div>
-      <div class="border-red-700 z-10 border" id="11"></div>
-      <div class="border-red-700 z-10 border" id="12"></div>
-      <div class="border-red-700 z-10 border" id="13"></div>
-      <div class="border-red-700 z-10 border" id="14"></div>
-      <div class="border-red-700 z-10 border" id="15"></div>
-      <div class="border-red-700 z-10 border" id="16"></div>
-      <div class="border-red-700 z-10 border" id="17"></div>
-      <div class="border-red-700 z-10 border" id="18"></div>
-      <div class="border-red-700 z-10 border" id="19"></div>
-      <div class="border-red-700 z-10 border" id="20"></div>
-      <div class="border-red-700 z-10 border" id="21"></div>
-      <div class="border-red-700 z-10 border" id="22"></div>
-      <div class="border-red-700 z-10 border" id="23"></div>
-      <div class="border-red-700 z-10 border" id="24"></div>
-      <div class="border-red-700 z-10 border" id="25"></div>
-      <div class="border-red-700 z-10 border" id="26"></div>
-      <div class="border-red-700 z-10 border" id="27"></div>
-      <div class="border-red-700 z-10 border" id="28"></div>
-      <div class="border-red-700 z-10 border" id="29"></div>
-      <div class="border-red-700 z-10 border" id="30"></div>
-      <div class="border-red-700 z-10 border" id="31"></div>
-      <div class="border-red-700 z-10 border" id="32"></div>
-      <div class="border-red-700 z-10 border" id="33"></div>
-      <div class="border-red-700 z-10 border" id="34"></div>
-      <div class="border-red-700 z-10 border" id="35"></div>
+      <div class="z-10" id="0"></div>
+      <div class="z-10" id="1"></div>
+      <div class="z-10" id="2"></div>
+      <div class="z-10" id="3"></div>
+      <div class="z-10" id="4"></div>
+      <div class="z-10" id="5"></div>
+      <div class="z-10" id="6"></div>
+      <div class="z-10" id="7"></div>
+      <div class="z-10" id="8"></div>
+      <div class="z-10" id="9"></div>
+      <div class="z-10" id="10"></div>
+      <div class="z-10" id="11"></div>
+      <div class="z-10" id="12"></div>
+      <div class="z-10" id="13"></div>
+      <div class="z-10" id="14"></div>
+      <div class="z-10" id="15"></div>
+      <div class="z-10" id="16"></div>
+      <div class="z-10" id="17"></div>
+      <div class="z-10" id="18"></div>
+      <div class="z-10" id="19"></div>
+      <div class="z-10" id="20"></div>
+      <div class="z-10" id="21"></div>
+      <div class="z-10" id="22"></div>
+      <div class="z-10" id="23"></div>
+      <div class="z-10" id="24"></div>
+      <div class="z-10" id="25"></div>
+      <div class="z-10" id="26"></div>
+      <div class="z-10" id="27"></div>
+      <div class="z-10" id="28"></div>
+      <div class="z-10" id="29"></div>
+      <div class="z-10" id="30"></div>
+      <div class="z-10" id="31"></div>
+      <div class="z-10" id="32"></div>
+      <div class="z-10" id="33"></div>
+      <div class="z-10" id="34"></div>
+      <div class="z-10" id="35"></div>
     </div>
     <div class="col-span-2 row-span-5 bg-gray-800 p-8">
       <h2 class="font-montserrat font-bold text-lg text-white">

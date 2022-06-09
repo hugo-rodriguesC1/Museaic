@@ -19,6 +19,7 @@ import CompteView from '../views/CompteView.vue'
 import ConnectView from '../views/ConnectView.vue'
 import InventaireView from '../views/InventaireView.vue'
 import DecouvrirView from '../views/DecouvrirView.vue'
+import CoinsView from '../views/CoinsView.vue'
 import ListeItem from '../views/admin/item/ListeItem.vue'
 import ListeTableau from '../views/admin/tableau/ListeTableau.vue'
 import ListeFond from '../views/admin/fond/ListeFond.vue'
@@ -74,6 +75,11 @@ const router = createRouter({
       path: '/decouvrir',
       name: 'DecouvrirView',
       component: DecouvrirView
+    },
+    {
+      path: '/coins',
+      name: 'CoinsView',
+      component: CoinsView
     },
     {
       path: '/item',

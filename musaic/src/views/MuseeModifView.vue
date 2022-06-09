@@ -28,217 +28,217 @@
         class="absolute h-full w-full inset-0"
       />
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="0"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="1"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="2"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="3"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="4"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="5"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="6"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="7"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="8"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="9"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="10"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="11"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="12"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="13"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="14"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="15"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="16"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="17"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="18"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="19"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="20"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="21"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="22"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="23"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="24"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="25"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="26"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="27"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="28"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="29"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="30"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="31"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="32"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="33"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="34"
         @dragover.prevent
         @drop.prevent="drop"
       ></div>
       <div
-        class="border-red-700 z-10 border"
+        class="border-gray-300 z-10 border-opacity-30 border"
         id="35"
         @dragover.prevent
         @drop.prevent="drop"
@@ -348,12 +348,16 @@
         class="border-purple-400 border"
         @dragover.prevent
         @drop.prevent="drop"
+        v-for="tableau in listetableau"
+        :key="tableau.id"
       >
         <img
+          :src="tableau.img"
+          :id="tableau.nom"
           draggable="true"
           @dragstart="dragStart"
           @dragover.stop
-          class="max-w-[5.5rem] mx-auto"
+          class="h-full w-full object-contain mx-auto"
         />
       </div>
     </div>
@@ -467,6 +471,7 @@ export default {
     return {
       listeItem: [],
       listeFond: [],
+      listetableau: [],
       EmplacementItem: null,
       itemOuvert: false,
       tableauOuvert: false,
@@ -487,6 +492,7 @@ export default {
     this.getUserConnect();
     this.getItems();
     this.getFond();
+    this.gettableau();
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
@@ -574,6 +580,27 @@ export default {
           const storage = getStorage();
           const dbFonds = ref(storage, "fond/" + it.img);
           getDownloadURL(dbFonds)
+            .then((url) => {
+              it.img = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+    async gettableau() {
+      const firestore = getFirestore();
+      const dbtableau = collection(firestore, "tableau");
+      await onSnapshot(dbtableau, (snapshot) => {
+        this.listetableau = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        this.listetableau.forEach(function (it) {
+          const storage = getStorage();
+          const dbtableauimg = ref(storage, "tableau/" + it.img);
+          getDownloadURL(dbtableauimg)
             .then((url) => {
               it.img = url;
             })

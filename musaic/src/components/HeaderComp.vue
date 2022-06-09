@@ -1,13 +1,70 @@
 <template>
   <div class="bg-gray-800 h-16 flex items-center px-4 justify-between">
     <Logo />
-    <router-link
-      to="/compte"
-      v-if="avatar != null"
-      class="flex text-white gap-2 items-center"
-    >
-      {{ name }}<img :src="avatar" alt="image de profil" class="w-36" />
-    </router-link>
+
+    <Menu>
+      <MenuButton>
+        <button
+          v-if="avatar != null"
+          class="flex text-white gap-2 items-center"
+        >
+          {{ name }}<img :src="avatar" alt="image de profil" class="w-36" />
+        </button>
+      </MenuButton>
+      <MenuItems
+        class="
+          absolute
+          top-16
+          right-0
+          flex flex-col
+          m-4
+          z-10
+          w-56
+          border-2 border-purple-400
+        "
+      >
+        <MenuItem v-slot="{ active }">
+          <RouterLink
+            to="/compte"
+            :class="{
+              'bg-purple-800': active,
+              'bg-gray-700': !active,
+            }"
+            class="text-white text-base py-6 px-5 font-semibold font-montserrat"
+            >Mon compte</RouterLink
+          >
+        </MenuItem>
+        <MenuItem v-slot="{ active }">
+          <RouterLink
+            to="/coins"
+            :class="{
+              'bg-purple-800': active,
+              'bg-gray-700': !active,
+            }"
+            class="text-white text-base py-6 px-5 font-semibold font-montserrat"
+            >Coins</RouterLink
+          >
+        </MenuItem>
+        <MenuItem v-slot="{ active }">
+          <button
+            :class="{
+              'bg-purple-800': active,
+              'bg-red-400': !active,
+            }"
+            class="
+              text-white text-base
+              py-6
+              px-5
+              font-semibold font-montserrat
+              text-left
+            "
+            @click="onDcnx()"
+          >
+            Se déconnecter
+          </button>
+        </MenuItem>
+      </MenuItems>
+    </Menu>
     <router-link
       v-if="avatar == null"
       to="/connect"
@@ -44,9 +101,10 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.
 
 import { emitter } from "../main.js";
 import Logo from "./icons/Logo.vue";
+import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 
 export default {
-  components: { Logo },
+  components: { Logo, Menu, MenuButton, MenuItems, MenuItem },
   data() {
     return {
       user: {
@@ -118,6 +176,20 @@ export default {
         console.log(this.userInfo[0]);
         console.log("avatar", this.avatar);
       });
+    },
+    onDcnx() {
+      signOut(getAuth())
+        .then((response) => {
+          this.message = "User non connecté";
+          this.user = {
+            email: null,
+            password: null,
+          };
+          emitter.emit("deConnectUser", { user: this.user });
+        })
+        .catch((error) => {
+          console.log("erreur de deconnexion", error);
+        });
     },
   },
 };
